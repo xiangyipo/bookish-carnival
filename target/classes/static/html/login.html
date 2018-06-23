@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>深圳市程通达国际物流有限公司-登录界面</title>
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <script src='../js/prefixfree.min.js'></script>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="../css/sweetalert.css"/>
+
+    </head>
+    <body>
+        <div id="logo">
+            <h1 class="hogo"><i> Try to be good every day</i></h1>
+        </div>
+        <section class="stark-login">
+            <form action="" method="">
+                <div id="fade-box">
+                    <input type="text" name="username" id="userName" placeholder="Username" required>
+                    <input type="password" id = "password" placeholder="Password" required>
+                </div>
+            </form>
+            <div class="hexagons">
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <br>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <br>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+
+                <br>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <br>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+            </div>
+        </section>
+
+        <div id="circle1">
+            <div id="inner-cirlce1">
+                <h2> </h2>
+            </div>
+        </div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <header class="htmleaf-header">
+            <h1>深圳市程通达国际物流有限公司 <span>后台管理系统 </span></h1>
+            <button id="login">Log In</button>
+        </header>
+    </body>
+</html>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/sweetalert.min.js"></script>
+<script>
+    $("button").off();
+    $("#login").on("click",function(){
+        var userName = $("#userName").val();
+        var password = $("#password").val();
+        if(!userName){
+            swal("请输入账号!");
+            return;
+        }
+        if(!password){
+            swal("请输入密码!");
+            return;
+        }
+        var obj ={};
+        obj.userNumber = userName;
+        obj.userPassword = password;
+        $.post("/login",obj, function(data){
+            if(data.data==true){
+                swal("Good!", "登录成功!正在加载资源！三秒钟后自定跳转页面", "success");
+                setTimeout(function(){
+                    window.location.href = "index-left.html";
+                },1000);
+            }else{
+                swal("OMG!", "登录失败！请检查用户密码是否正确", "error");
+            }
+        },"json");
+    })
+
+</script>

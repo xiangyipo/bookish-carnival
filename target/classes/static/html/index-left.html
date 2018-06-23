@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>程通达国际物流有限公司菜单</title>
+	
+    <script src="../js/adapter.js"></script> <!--rem适配js-->
+	
+    <link rel="stylesheet" href="../css/base.css"> <!--初始化文件-->
+    <link rel="stylesheet" href="../css/menu.css"> <!--主样式-->
+
+</head>
+<body>
+<div id="menu" style="float: left;">
+    <!--隐藏菜单-->
+    <div id="ensconce">
+        <h2 id="stretch">
+            <img src="../images/show.png" alt="" >
+            程通达菜单导航
+        </h2>
+    </div>
+
+    <!--显示菜单-->
+    <div id="open">
+        <div class="navH" id ="shrink">
+            程通达管理菜单
+            <span><img class="obscure" src="../images/obscure.png" alt=""></span>
+        </div>
+        <div class="navBox">
+            <ul>
+                <li>
+                    <h2 class="obtain">资源管理导航<i></i></h2>
+                    <div class="secondary">
+                        <h3 class="skip" val="slideshowPage.html">轮播图信息管理</h3>
+                        <h3>十三陵</h3>
+                        <h3>圆明园</h3>
+                        <h3>长城</h3>
+                        <h3>雍和宫</h3>
+                        <h3>天坛公园</h3>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="obtain">人员管理导航<i></i></h2>
+                    <div class="secondary">
+                        <h3 class="skip" val="userPage.html">人员信息管理</h3>
+                        <h3>夫子庙</h3>
+                        <h3>海底世界</h3>
+                        <h3>中山陵</h3>
+                        <h3>乌衣巷</h3>
+                        <h3>音乐台</h3>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="obtain">上海景点<i></i></h2>
+                    <div class="secondary">
+                        <h3>东方明珠</h3>
+                        <h3>外滩</h3>
+                        <h3>豫园</h3>
+                        <h3>文庙</h3>
+                        <h3>世博园</h3>
+                        <h3>田子坊</h3>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="obtain">深圳景点<i></i></h2>
+                    <div class="secondary">
+                        <h3>华侨城</h3>
+                        <h3>观澜湖</h3>
+                        <h3>世界之窗</h3>
+                        <h3>东门老街</h3>
+                        <h3>七娘山</h3>
+                        <h3>光明农场</h3>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="obtain">广州景点<i></i></h2>
+                    <div class="secondary">
+                        <h3>白云山</h3>
+                        <h3>长隆</h3>
+                        <h3>黄花岗公园</h3>
+                        <h3>中山纪念堂</h3>
+                        <h3>华南植物园</h3>
+                        <h3>南沙湿地公园</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="float:right;">
+    <iframe id="right" src="show.html" scrolling="auto" style="background-color: transparent;width: 1642px;height:950px;overflow:hidden;" marginwidth="0" marginheight="0" frameborder="0" >
+
+    </iframe>
+</div>
+
+<script src="../js/menu.js"></script> <!--控制js-->
+</body>
+</html>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script>
+    /**
+    * 张开
+    * */
+    $("#stretch").on("click",function () {
+        $("#right").width(1642);
+    });
+
+    /**
+     * 收缩
+     * */
+    $("#shrink").on("click",function () {
+        $("#right").width(1850);
+    });
+
+    /**
+    * 页面导航
+    * */
+    $(".skip").on("click",function () {
+        var val = $(this).attr("val");
+        $("#right").attr("src",val);
+    });
+</script>

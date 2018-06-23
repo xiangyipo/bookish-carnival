@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/sweetalert.css"/>
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/layui.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap-paginator.js" type="text/javascript"></script>
+    <script src="../js/sweetalert.min.js"></script>
+
+    <link href="../css/jumbotron-narrow.css" rel="stylesheet">
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../js/sweetalert.min.js"></script>
+</head>
+<body>
+<style>
+    .layui-form-item {
+        margin-top: 15px;
+    }
+    .layui-input-block{
+        width: 300px;
+        float: left;
+        margin-left: 0;
+    }
+    td.on{
+        border-bottom: 1px solid #D60711;
+        color: #D60711;
+    }
+    td.active{
+        background: #D60711;
+        color: #fff;
+    }
+    .search_div{
+        position: fixed;
+        z-index: 2;
+        background-color: #fff;
+        border: 1px solid #e6e6e6;
+    }
+    .layui-table {
+        width: 99%;
+        background-color: #fff;
+        color: #666;
+        align:center;
+    }
+    #page li{
+        cursor:pointer;
+    }
+    #count{
+        float: right;
+        margin-right: 90px;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    #from{
+        position: absolute;
+        display: none;
+        z-index: 100;
+        left: 100px;
+        top: 140px;
+    }
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        outline: 0;
+        -webkit-overflow-scrolling: touch;
+        background-color: rgb(0, 0, 0);
+        filter: alpha(opacity=60);
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 99;
+    }
+    #submit{
+        margin-left: 273px;
+    }
+    #close{
+        float: right;
+    }
+</style>
+<!-- 搜索组件 -->
+<div class="search_div">
+    <form class="layui-form" action="" onSubmit="return search();">
+        <div class="layui-form-item">
+            <label class="layui-form-label">输入关键字</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required  lay-verify="required" placeholder="根据创建人、修改人搜索" autocomplete="off" class="layui-input" id="searchInput">
+            </div>
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                <a id="refresh" class="layui-btn layui-btn-normal">刷新</a>
+            </div>
+        </div>
+    </form>
+</div>
+<p style="height: 70px;"></p>
+<a id="add" class="layui-btn layui-btn-normal">上传</a>
+<table class="layui-table" id="all_list" >
+    <colgroup>
+        <col>
+    </colgroup>
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>照片</th>
+            <th>状态</th>
+            <th>创建时间</th>
+            <th>创建人</th>
+            <th>修改时间</th>
+            <th>修改人</th>
+            <th>轮播等级</th>
+            <th>备注</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+</table>
+<!--上传轮播图弹出框-->
+<div class="modal" style="display: none;">  </div>
+<div class="container" id="from">
+    <a id="close" class="layui-btn layui-btn-normal">关闭</a>
+    <div class="jumbotron">
+        <div class="mselector">
+            <input type="file" accept="image/*" multiple="">
+            <button type="button" class="btn btn-lg btn-info">选择本地图片</button>
+        </div>
+        <hr>
+
+        <textarea id="url-res-txt" class="form-control" rows="5" placeholder="上传后的图片外链地址将显示在此处哦,下方会显示外链预览图。" style="display: none;"></textarea>
+        <p>描述:</p>
+        <textarea id="describe" class="form-control" rows="5" placeholder="请写图片描述"></textarea>
+        <div class="preview">
+            <hr>
+        </div>
+    </div>
+    <a id="submit" class="layui-btn layui-btn-normal">提交</a>
+</div>
+
+<div class="foot">
+    <ul id="count"></ul>
+</div>
+
+<div class="container">
+    <div>
+        <ul id="page"></ul>
+    </div>
+</div>
+<script>
+    //总页数
+    function init(obj) {
+        var val = "";
+        if(obj && obj.page){
+            val="?page="+obj.page,obj;
+        }
+        $.post("/slideshow/querySysSlideshowListPaged"+val, function(result){
+            $("#count").html("当前共"+result.data.count+"条数据");
+            //分页
+            var page = result.data.page;
+            $(function () {
+                var currentPage = page;
+                var totalPages = result.data.totalPages;
+                $("#page").bootstrapPaginator({
+                    bootstrapMajorVersion:3,
+                    currentPage: currentPage,
+                    numberOfPages: 10,
+                    totalPages:totalPages,
+                    shouldShowPage:true,
+                    useBootstrapTooltip:true,
+                    //点击事件
+                    onPageClicked: function (event, originalEvent, type, page) {
+                        var obj = {};
+                        obj.page = page;
+                        init(obj);
+                    }
+                });
+            });
+            page = page*10-10+1;
+            var list = result.data.list;
+            $("#tbody").empty();
+            var str = "";
+            for(var i=0;i<list.length;i++){
+                str +="<tr align=center>"
+                str +="<td width='2%'>"+(page+i)+"</td>";
+                str +="<td width='6%'><img width='60' src = "+list[i].url+" /></td>";
+                var state = "开启";
+                var switc ="禁启";
+                if(list[i].state==2){
+                    state = "禁启";
+                    switc = "开启";
+                }
+                str +="<td  width='5%'>"+state+"</td>";
+                str +="<td  width='16%'>"+list[i].createTime+"</td>";
+                str +="<td  width='6%' class=list_one>"+list[i].createUserId+"</td>";
+                str +="<td  width='16%'>"+list[i].updateTime+"</td>";
+                str +="<td  width='6%' class=list_one>"+list[i].updateUserId+"</td>";
+                str +="<td  width='10%'>"+list[i].rank+"</td>";
+                str +="<td  width='15%'>"+list[i].remark+"</td>";
+                str +="<td width='25%'><a class='layui-btn layui-btn-normal update' slideshowId="+list[i].id+">修改</a>";
+                str +="<a class='layui-btn layui-btn-normal delete' slideshowId="+list[i].id+">删除</a>";
+                str +="<a class='layui-btn layui-btn-normal switch' slideshowId="+list[i].id+">"+switc+"</a></td>";
+                str +="</tr>";
+            }
+            $("#tbody").append(str);
+
+
+            /**
+            * 开关
+            * */
+            $(".switch").on("click",function(){
+                var id = $(this).attr("slideshowId");
+                var html = $(this).html();
+                swal({
+                    title: "您确定要"+html+"吗？",
+                    text: "您确定要"+html+"这这条数据吗？",
+                    type: "warning",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    confirmButtonText: "是的，我要"+html+"",
+                    confirmButtonColor: "#ec6c62",
+                }, function() {
+                    var obj ={};
+                    obj.id = id;
+                    var state = 1;
+                    if(html=="禁启"){
+                        state = 2;
+                    }
+                    obj.state=state;
+                    $.post("/slideshow/updateSlideshow",obj, function(result){
+                        if(result.data=="修改成功"){
+                            swal("Good!", html+"成功！！！", "success");
+                        }else{
+                            swal("OMG!", html+"失败！！！", "error");
+                        }
+                        init();
+                    },"json");
+                });
+            });
+
+            /**
+            * 修改
+            * */
+            $(".update").on("click",function(){
+                var id = $(this).attr("slideshowId");
+                $.post("/slideshow/getSlideshow?id="+id,function(result){
+                    var obj = result.data;
+                    if(obj){
+                        $("#describe").val(obj.remark);
+                        $("#submit").html("修改");
+                        $("#submit").attr("slideshowId",id);
+                        closeOpen('open');
+                    }
+                });
+            });
+
+            /**
+             * 删除
+             * */
+            $(".delete").on("click",function(){
+                var id = $(this).attr("slideshowId");
+                swal({
+                    title: "您确定要删除吗？",
+                    text: "您确定要删除这这条数据吗？",
+                    type: "warning",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    confirmButtonText: "是的，我要删除",
+                    confirmButtonColor: "#ec6c62",
+                }, function() {
+                    $.post("/slideshow/deleteFile?sysSlideshowId="+id,function(result){
+                        if(result.data=="删除成功"){
+                            swal("操作成功!", "已成功删除数据！", "success");
+                            init();
+                        }else{
+                            swal("OMG", "删除操作失败了!", "error");
+                        }
+                    });
+                });
+            });
+        },"json");
+    }
+    init();
+    //刷新
+    $("#refresh").on("click",function(){
+        init();
+        clear();
+    });
+    /**
+    * 清空筛选条件
+    * */
+    function clear(){
+        $("#searchInput").val("");
+    }
+
+    // 定义首个查询下键
+    var active = 0;
+    $('.ayui-btn').click(function(){
+        search();
+    })
+    function search(){
+        // 获取搜索框的值
+        var kwds = $("#searchInput").val();
+        // 获取第一个列表内容
+        var this_one = {};
+        var real_name = '';
+        // 定义数据列表
+        var list = $("#all_list .list_one");
+        // 定义查找的起始值
+        var true_one = 0;
+        for (var i = 0; i < list.length; i++) {
+            this_one = $(list[i]);
+
+            real_name = this_one.text().toString();
+            // 执行like匹配
+            if(real_name.match(kwds)){
+                // 处理第当前的结果
+                if(true_one == active){
+                    // 获取窗口的宽和高
+                    var windows_wdh = $(window).width();
+                    var windows_hgt = $(window).height();
+                    // 获取第一个坐标
+                    var x_len = this_one.offset().left;
+                    var y_len = this_one.offset().top;
+                    // 驱动滚动条滚动到指定的位置
+                    $("html,body").animate({scrollTop:(y_len-windows_hgt/2), scrollLeft:(x_len-windows_wdh/2)},500);
+                    // 标记当前选中的结果
+                    this_one.addClass('active');
+                    this_one.removeClass('on');
+                }else{
+                    // 标记符合的结果
+                    this_one.addClass('on');
+                    this_one.removeClass('active');
+                }
+                // 累加真实的选择
+                true_one++;
+            }else{
+                this_one.removeClass('on');
+            }
+        }
+        // 判断是否搜索完毕 如果搜索完毕 则从第一个开始 否则继续搜索下一个
+        active = active >= true_one-1 ? 0 : active+1;
+        return false;
+    }
+</script>
+
+<script type="text/javascript">
+    /**
+    * 初始化环境上传到微博服务器
+    * */
+    function initialize() {
+        $('.picurl > input').bind('focus mouseover', function () {
+            if (this.value) {
+                this.select()
+            }
+        });
+        $("input[type='file']").change(function (e) {
+            images_upload(this.files)
+        });
+        var obj = $('body');
+        obj.on('dragenter', function (e) {
+            e.stopPropagation();
+            e.preventDefault()
+        });
+        obj.on('dragover', function (e) {
+            e.stopPropagation();
+            e.preventDefault()
+        });
+        obj.on('drop', function (e) {
+            e.preventDefault();
+            images_upload(e.originalEvent.dataTransfer.files)
+        })
+    };
+    initialize();
+    var images_upload = function(files) {
+        var flag = 0;
+        $('textarea').empty();
+        $(files).each(function(key, value) {
+            $('.mselector > button')[0].innerHTML = '上传中';
+            image_form = new FormData();
+            image_form.append('file', value);
+            $.ajax({
+                url: 'https://zs.mtkan.cc/upload.php',
+                type: 'POST',
+                data: image_form,
+                mimeType: 'multipart/form-data',
+                contentType: false,
+                cache: false,
+                processData: false,
+                dataType: 'json',
+                success: function(data) {
+                    debugger
+                    flag++;
+                    if (typeof data.original_pic != 'undefined') {
+                        $('#url-res-txt').append(data.original_pic + '\n');
+                        $('.mselector > button')[0].innerHTML = '成功 ' + flag + '/' + files.length;
+                        var apc = "<img src='" + data.original_pic + "' alt='" + data.original_pic + "'><br>";
+                        $('.preview').css('display', 'block');
+                        $(".preview>hr").after(apc)
+                    } else {
+                        $('.mselector > button')[0].innerHTML = '第' + flag + '张上传失败'
+                    } if (flag == $("input[type='file']")[0].files.length) {
+                        if (typeof data.original_pic != 'undefined') {
+                            $('.mselector > button')[0].innerHTML = '上传成功'
+                        } else {
+                            $('.mselector > button')[0].innerHTML = '上传失败';
+                            $('#url-res-txt').append(data.error_msg + '\n');
+                            alert(data.error_msg);
+                        }
+                    }
+                },
+                error: function(XMLResponse) {
+                    alert("error:" + XMLResponse.responseText)
+                }
+            })
+        })
+    };
+    /**
+     * 打开关闭
+     * */
+    function closeOpen(index){
+        if(index=='open'){
+            $(".modal").show();
+            $("#from").show();
+        }else{
+            $(".modal").hide();
+            $("#from").hide();
+            $(".preview").empty();
+            $("#describe").val("");
+        }
+    }
+    /**
+     * 点击上传按钮
+     * */
+    $("#add").on("click",function () {
+        $("#submit").html("提交");
+        $("#describe").val("");
+        closeOpen('open');
+    });
+    /**
+     * 点击关闭按钮
+     * */
+    $("#close").on("click",function () {
+        closeOpen('close');
+    });
+
+    /**
+     * 点击提交或者修改绑定在一起
+     * */
+    $("#submit").on("click",function () {
+        var obj = {};
+        var remark = $("#describe").val();
+        obj.remark = remark;
+        var index = $("#submit").html();
+        if(index=="修改"){
+            var id = $("#submit").attr("slideshowId");
+            obj.id = id;
+            $.post("/slideshow/updateSlideshow",obj, function(result){
+                if(result.data=="修改成功"){
+                    swal("Good!", "修改描述成功！！！", "success");
+                }else{
+                    swal("OMG!", "修改描述失败！！！", "error");
+                }
+                closeOpen("close");
+            },"json");
+        }else{
+            var url = $("#url-res-txt").val();
+            if(url.length<1){
+                swal("请先上传图片!");
+                return;
+            }
+            obj.url = url;
+            $.post("/slideshow/addSlideshow",obj, function(result){
+                if(result.data=="上传成功"){
+                    swal("Good!", "上传成功！系统将自动关系提示！！！", "success");
+                    setTimeout(function(){
+                        window.location.href="slideshowPage.html";
+                    },500);
+                }else{
+                    swal("OMG!", "上传失败！请检查是否上传了图片", "error");
+                }
+                closeOpen("close");
+            },"json");
+        }
+        init();
+    });
+</script>
+</body>
+</html>
