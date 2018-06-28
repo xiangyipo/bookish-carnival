@@ -28,6 +28,14 @@ public class UserCache implements InitializingBean {
     long time = System.currentTimeMillis();
 
     /**
+     * 提供最新的用户列表
+     */
+    public List<SysUser> getSysUserList() {
+        updateList();
+        return list;
+    }
+
+    /**
      * 实现Springd的InitializingBean接口
      * 初始化调用afterPropertiesSet方法
      */
