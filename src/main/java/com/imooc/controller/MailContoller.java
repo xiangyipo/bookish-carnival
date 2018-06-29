@@ -17,14 +17,14 @@ public class MailContoller extends WebContoller {
 
 
     /**
-    * 向所有后台管理发送邮件
-    * */
+     * 向所有后台管理发送邮件
+     */
     @RequestMapping("sendMail")
-    public IMoocJSONResult sendMail(){
-        String subject = "客户信息";
-        String html = "要发送邮件的内容----目前没有模板---定义好模板！！！";
+    public IMoocJSONResult sendMail() {
+        String subject = "系统内容提示-有新客户请及时回复";
+        String html = "有新客户请及时回复";
         try {
-            mailService.sendMail(subject,html);
+            mailService.sendMail(subject, html);
         } catch (Exception e) {
             e.printStackTrace();
             return IMoocJSONResult.ok("发送失败");
