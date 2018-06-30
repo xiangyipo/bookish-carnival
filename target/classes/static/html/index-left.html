@@ -35,7 +35,7 @@
                     <h2 class="obtain">资源管理导航<i></i></h2>
                     <div class="secondary">
                         <h3 class="skip" val="slideshowPage.html">轮播图信息管理</h3>
-                        <h3>十三陵</h3>
+                        <h3 id="updatePwd">修改密码</h3>
                         <h3>圆明园</h3>
                         <h3>长城</h3>
                         <h3>雍和宫</h3>
@@ -96,10 +96,11 @@
     </iframe>
 </div>
 
-<script src="../js/menu.js"></script> <!--控制js-->
+<script type="text/javascript" src="../js/menu.js"></script> <!--控制js-->
 </body>
 </html>
-<script src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/plugs.js"></script>
 <script>
     /**
     * 张开
@@ -122,4 +123,16 @@
         var val = $(this).attr("val");
         $("#right").attr("src",val);
     });
+
+    /**
+    * 修改密码
+    * */
+    $("#updatePwd").on("click",function () {
+        $.jq_Panel({
+            title: "修改密码",
+            iframeWidth: 800,
+            iframeHeight: 500,
+            url: "updatePws.html"
+        });
+    })
 </script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css"/>
+    <style>
+        .admin-main{
+            padding-top: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content">
+        <div class="admin-content-body" >
+            <div class="am-g">
+                <form class="am-form am-form-horizontal"
+                      method="post"
+                      style="padding-top:30px;" data-am-validator>
+                    <div class="am-form-group">
+                        <label  class="am-u-sm-3 am-form-label">
+                            新密码 </label>
+                        <div class="am-u-sm-9">
+                            <input type="password" id="doc-vld-pwd-1" required placeholder="请输入新密码"
+                                   name="password"> <small>输入新密码。</small>
+                        </div>
+                    </div>
+                    <div class="am-form-group">
+                        <label class="am-u-sm-3 am-form-label">
+                            重复密码</label>
+                        <div class="am-u-sm-9">
+                            <input type="password" id="doc-vld-pwd-2" required placeholder="请输入重复密码"
+                                   name="pwd"  data-equal-to="#doc-vld-pwd-1"  required> <small>输入重复密码。</small>
+                        </div>
+                    </div>
+                    <div class="am-form-group">
+                        <div class="am-u-sm-9 am-u-sm-push-3">
+                            <input type="button"  id="btns" class="am-btn am-btn-success" value="修改密码" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/plugs.js"></script>
+<script src="../js/sweetalert.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#btns").on("click",function () {
+            var pwd1 = $("#doc-vld-pwd-1").val();
+            var pwd2 = $("#doc-vld-pwd-2").val();
+            if(pwd1!=pwd2){
+                swal("两次密码不一致!请重新输入!");
+                return;
+            }else{
+                $.post("/user/updatePws?userPassword="+pwd1,function(result){
+                    var index = result.data;
+                    if(index){
+                        swal("Good!", "修改密码成功！","success");
+                        setTimeout(function(){
+                            window.parent.$.jq_Panel_close();
+                        },300);
+                    }else{
+                        swal("OMG!", "修改密码失败！","error");
+                    }
+                });
+            }
+        })
+    })
+</script>
+</body>
+</html>
