@@ -1,6 +1,7 @@
 package com.imooc.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.imooc.cacheTools.UserCache;
 import com.imooc.mapper.SysUserMapper;
 import com.imooc.mapper.SysUserMapperCustom;
 import com.imooc.pojo.SysUser;
@@ -28,6 +29,13 @@ public class SysUserServiceImpl implements SysUserService {
      */
     @Resource
     SysUserMapperCustom sysUserMapperCustom;
+
+    /**
+     * USER缓存
+     */
+    @Resource
+    UserCache userCache;
+
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
@@ -85,5 +93,12 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public int selectCount(SysUser user) {
         return sysUserMapper.selectCount(user);
+    }
+
+    @Override
+    public int updatePassword(SysUser user) {
+        int i = sysUserMapperCustom.updatePassword(user);
+        userCache.updateList();
+        return i;
     }
 }

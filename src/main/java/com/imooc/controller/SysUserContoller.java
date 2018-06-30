@@ -82,4 +82,14 @@ public class SysUserContoller extends WebContoller {
     public IMoocJSONResult queryUserById(String userId) {
         return IMoocJSONResult.ok(sysUserService.queryUserById(userId));
     }
+
+    /**
+     * 修改用户密码
+     */
+    @PostMapping("/updatePws")
+    public IMoocJSONResult updatePws(SysUser sysUser) {
+        sysUser.setId(getUserId());
+        sysUserService.updatePassword(sysUser);
+        return IMoocJSONResult.ok(true);
+    }
 }

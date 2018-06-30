@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.imooc.mapper.SysUserMapperCustom" >
-  
+
+	<resultMap id="BaseResultMap" type="com.imooc.pojo.SysUser">
+		<id column="id" jdbcType="VARCHAR" property="id" />
+		<result column="user_name" jdbcType="VARCHAR" property="userName" />
+		<result column="user_sex" jdbcType="VARCHAR" property="userSex" />
+		<result column="user_age" jdbcType="INTEGER" property="userAge" />
+		<result column="user_number" jdbcType="VARCHAR" property="userNumber" />
+		<result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+		<result column="user_mailbox" jdbcType="VARCHAR" property="userMailbox" />
+	</resultMap>
+
   <!-- 查询简单的用户信息 -->
 	<select id="userPasswordEncrypt" resultType="java.lang.String"  parameterType="java.lang.String" >
 	    select MD5(#{VALUE})
 	</select>
+
+	<update id="updatePassword" parameterType="com.imooc.pojo.SysUser">
+		update sys_user set user_password=MD5(#{userPassword}) WHERE id = #{id}
+	</update>
+
 </mapper>

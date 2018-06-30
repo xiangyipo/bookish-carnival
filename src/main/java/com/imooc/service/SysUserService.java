@@ -22,5 +22,6 @@ public interface SysUserService {
 
     int selectCount(SysUser user);
 
+    int updatePassword(SysUser user);
 
 }

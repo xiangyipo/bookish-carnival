@@ -9,12 +9,8 @@
         <link rel="stylesheet" type="text/css" href="../css/default.css">
         <script src='../js/prefixfree.min.js'></script>
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
-        <!--[if IE]>
         <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
-        <![endif]-->
-
         <link rel="stylesheet" type="text/css" href="../css/sweetalert.css"/>
-
     </head>
     <body>
         <div id="logo">
@@ -132,10 +128,7 @@
         obj.userPassword = password;
         $.post("/login",obj, function(data){
             if(data.data==true){
-                swal("Good!", "登录成功!正在加载资源！三秒钟后自定跳转页面", "success");
-                setTimeout(function(){
-                    window.location.href = "index-left.html";
-                },1000);
+                window.location.href = "index-left.html";
             }else{
                 swal("OMG!", "登录失败！请检查用户密码是否正确", "error");
             }
