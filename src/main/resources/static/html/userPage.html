@@ -152,7 +152,7 @@
             $("#tbody").append(str);
 
             /**
-            * 删除
+            * 删除人员
             * */
             $(".delete").on("click",function(){
                 var userId = $(this).attr("userId");
@@ -177,30 +177,28 @@
             });
 
             /**
-             * 修改
+             * 修改人员
              * */
             $(".update").on("click",function(){
                 var userId = $(this).attr("userId");
                 $.jq_Panel({
-                    title: "修改人员",
+                    title: "修改人员信息",
                     iframeWidth: 800,
                     iframeHeight: 500,
-                    url: "user/addUser.html?userId="+userId
+                    url: "user/operationUser.html?userId="+userId
                 });
-                /*$.post("/user/queryUserById?userId="+userId,function(result){
-
-                });*/
             });
+
         },"json");
     }
     init();
 
     $("#add").on("click",function(){
         $.jq_Panel({
-            title: "添加人员",
+            title: "添加人员信息",
             iframeWidth: 800,
             iframeHeight: 500,
-            url: "user/addUser.html"
+            url: "user/operationUser.html"
         });
     });
 

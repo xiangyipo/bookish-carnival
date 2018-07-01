@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/input.css">
+		<link href="../../css/playground.css" media="all" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="../../css/sweetalert.css"/>
+		<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+		<script src="../../js/sweetalert.min.js"></script>
+	</head>
+	<body>
+		<div style="padding-top: 0px;" >
+			<form>
+				<input required='' type='text' id="userName">
+				<label alt='请输入用户姓名' placeholder='用户姓名'></label>
+			</form>
+
+			<div style="margin-bottom:50px;">
+				<form>
+					<input type="radio" name="userSex" value="男" /><label>男</label>
+					<input name="userSex" checked type="radio" value="女"/><label>女</label>
+				</form>
+			</div>
+
+
+			<form>
+				<input required='' type='text' id="userAge">
+				<label alt='请输入用户年龄' placeholder='用户年龄'></label>
+			</form>
+			<form>
+				<input required='' type='text' id="userMailbox">
+				<label alt='请输入用户邮箱' placeholder='用户邮箱'></label>
+			</form>
+
+			<form>
+				<a class="large green button" id="btns">修改提交</a>
+			</form>
+		</div>
+	<script>
+		/**
+        * 封装参数携带的信息
+        * */
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        /**
+        * 初始化
+        * */
+        function init(){
+            var userId = getQueryString("userId");
+            if(userId){
+                $.post("/user/queryUserById?userId="+userId,function(result){
+                    var data = result.data;
+                    paddingUserInfo(data);
+                });
+            }else{
+                $("#btns").html("增加提交");
+			}
+
+			/**
+			* 增加或者修改人员
+			* */
+			$("#btns").on("click",function(){
+                var sysUser = getSysUser();
+                if(userId){
+
+                }else{
+
+                }
+			});
+        }
+        init();
+
+        /**
+         * 填充用户信息
+         * */
+        function paddingUserInfo(data){
+            $("#userName").val(data.userName);
+            var userSex = data.userSex;
+            var arr = $("input[name='userSex']");
+            for(var i=0;i<arr.length;i++){
+                var val = $(arr[i]).val();
+                if(val==userSex){
+                    $(arr[i]).attr("checked",true);
+				}else{
+                    $(arr[i]).attr("checked",false);
+                }
+			}
+            $("#userAge").val(data.userAge);
+            $("#userMailbox").val(data.userMailbox);
+		}
+
+		/**
+		* 获取所有信息
+		* */
+        function getSysUser(){
+            var sysUser={};
+            var userName = $("#userName").val();
+            if(userName){
+                sysUser.userName = userName;
+			}else{
+                swal("用户姓名不能为空!");
+                $("#userName").val("");
+                return;
+			}
+            sysUser.userSex = $("input[name='userSex']:checked").val();
+            var userAge = $("#userAge").val();
+            if(userAge){
+                sysUser.userAge = userAge;
+			}else{
+                swal("用户年龄不能为空!");
+                $("#userAge").val("");
+                return;
+            }
+            var userMailbox =  $("#userMailbox").val();
+            var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(filter.test(userMailbox)){
+                sysUser.userMailbox = userMailbox;
+			}else{
+                swal("您的电子邮件格式不正确！！！请重新输入！！！");
+                $("#userMailbox").val("");
+                return;
+            }
+            return sysUser;
+		}
+	</script>
+	</body>
+</html>

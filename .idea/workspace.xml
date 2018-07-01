@@ -2,23 +2,61 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/imooc/controller/SysUserContoller.java" line="72" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/resources/static/html/user/operationUser.html" line="38" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/resources/static/html/user/operationUser.html" line="6" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/resources/static/html/user/operationUser.html" line="101" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3230a458-2376-4852-91e6-0169ce01ae77" name="Default" comment="发送邮件">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/input.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/overlay-button.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/playground.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/controller/SysUserContoller.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/controller/SysUserContoller.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/intercept/LoginConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/intercept/LoginConfiguration.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/mapper/SysUserMapperCustom.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/mapper/SysUserMapperCustom.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/service/SysUserService.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/service/SysUserService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/service/impl/SysUserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/service/impl/SysUserServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SysUserMapperCustom.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SysUserMapperCustom.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/html/index-left.html" afterPath="$PROJECT_DIR$/target/classes/static/html/index-left.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/html/login.html" afterPath="$PROJECT_DIR$/target/classes/static/html/login.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/user/addUser.html" afterPath="$PROJECT_DIR$/src/main/resources/static/html/user/operationUser.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/userPage.html" afterPath="$PROJECT_DIR$/src/main/resources/static/html/userPage.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/ImoocApplication.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/cacheTools/UserCache.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/config/LogServiceTakeTime.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/config/ResourcesConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/controller/SysSlideshowContoller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/controller/web/WebContoller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/intercept/LoginInterceptor.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/mapper/SysSlideshowMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/mapper/SysSlideshowMapperCustom.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/mapper/SysUserMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/pojo/IMoocJSONResult.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/pojo/SysSlideshow.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/pojo/SysUser.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/service/SysSlideshowService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/service/impl/SysSlideshowServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/utils/GeneratorDisplay.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/utils/JsonUtils.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/utils/MyMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/staticresource/URL.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/Code.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/DayCode.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/Id.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/IdWorker.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/InvalidSystemClock.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/RandomCodeStrategy.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/Sid$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/Sid.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/Test.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/WorkerIdStrategy.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/strategy/DayPrefixRandomCodeStrategy.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/strategy/DefaultRandomCodeStrategy$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/strategy/DefaultRandomCodeStrategy.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/strategy/FileLock.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/utils/HttpReq.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/utils/IPv4Utils.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/utils/Ip.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/utils/Props$Silent.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/utils/Props.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/utils/Serializes.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/n3r/idworker/utils/Utils.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/html/userPage.html" afterPath="$PROJECT_DIR$/target/classes/static/html/userPage.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,21 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="addUser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/user/addUser.html">
+      <file leaf-file-name="input.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/input.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="57" column="13" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-left.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/index-left.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="130" column="15" lean-forward="false" selection-start-line="130" selection-start-column="15" selection-end-line="130" selection-end-column="15" />
+            <state relative-caret-position="324">
+              <caret line="61" column="1" lean-forward="false" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -57,18 +85,31 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="132" column="57" lean-forward="false" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
+            <state relative-caret-position="158">
+              <caret line="118" column="27" lean-forward="false" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/plugs.js">
+      <file leaf-file-name="operationUser.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/user/operationUser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-92">
-              <caret line="541" column="8" lean-forward="false" selection-start-line="541" selection-start-column="8" selection-end-line="541" selection-end-column="8" />
+            <state relative-caret-position="181">
+              <caret line="72" column="17" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playground.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/playground.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -77,18 +118,8 @@
       <file leaf-file-name="show.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysUserContoller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/controller/SysUserContoller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1886">
-              <caret line="93" column="5" lean-forward="false" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+            <state relative-caret-position="322">
+              <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -97,7 +128,7 @@
       <file leaf-file-name="SysUserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/impl/SysUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
+            <state relative-caret-position="1656">
               <caret line="99" column="57" lean-forward="false" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
               <folding>
                 <element signature="e#1183#1184#0" expanded="true" />
@@ -107,12 +138,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updatePws.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="updatePws.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/updatePws.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="327">
+              <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,7 +153,7 @@
       <file leaf-file-name="UserCache.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/cacheTools/UserCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="711">
               <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
@@ -130,8 +163,8 @@
       <file leaf-file-name="userPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/userPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="175" column="19" lean-forward="false" selection-start-line="158" selection-start-column="16" selection-end-line="175" selection-end-column="19" />
+            <state relative-caret-position="-552">
+              <caret line="168" column="44" lean-forward="false" selection-start-line="168" selection-start-column="44" selection-end-line="168" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -198,9 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/SlideshowServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/controller/SsysSlideshowContoller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/staticresource/URL.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/SysSlideshowMapperCustom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/ResourcesConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/html/index.html" />
@@ -237,8 +267,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/intercept/LoginConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/html/updatePwd.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/html/user/addUser.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/html/userPage.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/html/index-left.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/mapper/SysUserMapperCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/pojo/SysUser.java" />
@@ -249,6 +277,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/plugs.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/html/updatePws.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/html/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/html/user/addUser.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/html/userPage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/input.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/input.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/html/user/operationUser.html" />
       </list>
     </option>
   </component>
@@ -385,9 +418,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -594,7 +625,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -616,12 +649,12 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\bookish-carnival\src\main\resources\static\js" />
-      <recent name="E:\bookish-carnival\src\main\resources\static\html" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\bookish-carnival\src\main\resources\static\html\user" />
       <recent name="E:\bookish-carnival\src\main\resources\static\css" />
-      <recent name="E:\imooc-springboot-starter-master-demo\src\main\resources\static\js" />
       <recent name="E:\imooc-springboot-starter-master-demo\src\main\resources\static\css" />
+      <recent name="E:\imooc-springboot-starter-master-demo\src\main\resources\static\js" />
+      <recent name="E:\imooc-springboot-starter-master-demo\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.staticresource" />
@@ -630,12 +663,12 @@
       <recent name="com.imooc.service" />
       <recent name="com.imooc.pojo" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\bookish-carnival\src\main\resources\static\html\user" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\bookish-carnival\src\main\resources\static\css" />
-      <recent name="E:\imooc-springboot-starter-master-demo\src\main\resources\static\css" />
+      <recent name="E:\bookish-carnival\src\main\resources\static\js" />
+      <recent name="E:\bookish-carnival\src\main\resources\static\html" />
       <recent name="E:\imooc-springboot-starter-master-demo\src\main\resources\static\js" />
-      <recent name="E:\imooc-springboot-starter-master-demo\src\main\resources" />
+      <recent name="E:\imooc-springboot-starter-master-demo\src\main\resources\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -796,6 +829,8 @@
       <workItem from="1530329749316" duration="1169000" />
       <workItem from="1530331976089" duration="699000" />
       <workItem from="1530364671141" duration="10545000" />
+      <workItem from="1530375697380" duration="104000" />
+      <workItem from="1530427815991" duration="6512000" />
     </task>
     <task id="LOCAL-00001" summary="发送邮件">
       <created>1530169294601</created>
@@ -822,7 +857,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128853000" />
+    <option name="totallyTimeSpent" value="135469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -837,21 +872,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23614073" sideWeight="0.5039459" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15543479" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14891304" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44891304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46413043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46413043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23614073" sideWeight="0.4960541" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23880596" sideWeight="0.4960541" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -861,6 +895,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -908,6 +943,11 @@
     <MESSAGE value="发送邮件、悬浮框、修改密码、用户的CRUD" />
     <option name="LAST_COMMIT_MESSAGE" value="发送邮件、悬浮框、修改密码、用户的CRUD" />
   </component>
+  <component name="WindowStateProjectService">
+    <state width="192" height="175" key="Git.Branch.Popup" />
+    <state width="192" height="175" key="Git.Branch.Popup/1920.1080" />
+    <state width="192" height="175" key="Git.Branch.Popup@1920.1080" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="65" />
@@ -919,41 +959,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/pojo/SysSlideshow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/utils/GeneratorDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/utils/JsonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/utils/MyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/staticresource/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/mapper/SysSlideshowMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1063,9 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="24" column="34" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,7 +1101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,7 +1116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="0" column="1090" lean-forward="false" selection-start-line="0" selection-start-column="1090" selection-end-line="0" selection-end-column="1090" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,7 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,15 +1206,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/cacheTools/UserCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,21 +1221,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="4703" column="4" lean-forward="false" selection-start-line="4703" selection-start-column="4" selection-end-line="4703" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/user/addUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="57" column="13" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/index-left.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="2990">
           <caret line="130" column="15" lean-forward="false" selection-start-line="130" selection-start-column="15" selection-end-line="130" selection-end-column="15" />
           <folding />
         </state>
@@ -1253,39 +1234,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/plugs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92">
+        <state relative-caret-position="12443">
           <caret line="541" column="8" lean-forward="false" selection-start-line="541" selection-start-column="8" selection-end-line="541" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/userPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="175" column="19" lean-forward="false" selection-start-line="158" selection-start-column="16" selection-end-line="175" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="132" column="57" lean-forward="false" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/impl/SysUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
+        <state relative-caret-position="1656">
           <caret line="99" column="57" lean-forward="false" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
           <folding>
             <element signature="e#1183#1184#0" expanded="true" />
@@ -1294,11 +1251,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2093">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/cacheTools/UserCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/normalize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="46" lean-forward="false" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/updatePws.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state relative-caret-position="327">
+          <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/input.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="61" column="1" lean-forward="false" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/playground.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/userPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552">
+          <caret line="168" column="44" lean-forward="false" selection-start-line="168" selection-start-column="44" selection-end-line="168" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="118" column="27" lean-forward="false" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/user/operationUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="72" column="17" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
