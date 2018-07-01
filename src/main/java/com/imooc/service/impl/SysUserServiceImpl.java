@@ -39,8 +39,13 @@ public class SysUserServiceImpl implements SysUserService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public void saveUser(SysUser user) {
+    public int saveUser(SysUser user) {
+        int maxUserNumber = sysUserMapperCustom.getMaxUserNumber()+1;
+        user.setUserNumber(maxUserNumber);
+        user.setUserPassword(sysUserMapperCustom.userPasswordEncrypt("123456"));
+        user.setMailboxIndex((byte)0);
         sysUserMapper.insert(user);
+        return maxUserNumber;
     }
 
     @Override
@@ -100,5 +105,17 @@ public class SysUserServiceImpl implements SysUserService {
         int i = sysUserMapperCustom.updatePassword(user);
         userCache.updateList();
         return i;
+    }
+
+    @Override
+    public int updateMailboxIndex(SysUser user) {
+        int i = sysUserMapperCustom.updateMailboxIndex(user);
+        userCache.updateList();
+        return i;
+    }
+
+    @Override
+    public List<SysUser> getReceiveMailboxUser() {
+        return  sysUserMapperCustom.getReceiveMailboxUser();
     }
 }

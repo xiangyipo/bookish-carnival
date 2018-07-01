@@ -56,6 +56,9 @@
         font-size: 15px;
         margin-top: 10px;
     }
+    .jq_dvpanel{
+        z-index: 999999999;
+    }
 </style>
 <!-- 搜索组件 -->
 <div class="search_div">
@@ -88,6 +91,7 @@
             <th>用户年龄</th>
             <th>用户账号</th>
             <th>用户邮箱</th>
+            <th>接邮状态</th>
             <th>操作</th>
         </tr>
     </thead>
@@ -138,15 +142,24 @@
             $("#tbody").empty();
             var str = "";
             for(var i=0;i<list.length;i++){
+                var set = "禁接邮";
+                var state = "接邮";
+                if(list[i].mailboxIndex==0){
+                    set = "准接邮";
+                    state = "禁邮";
+                }
+
                 str +="<tr align=center>"
                 str +="<td width='5%'>"+(page+i)+"</td>";
-                str +="<td width='20%' class=list_one>"+list[i].userName+"</td>";
+                str +="<td width='10%' class=list_one>"+list[i].userName+"</td>";
                 str +="<td width='10%'>"+list[i].userSex+"</td>";
                 str +="<td width='10%'>"+list[i].userAge+"</td>";
-                str +="<td width='20%' class=list_one>"+list[i].userNumber+"</td>";
-                str +="<td width='20%' class=list_one>"+list[i].userMailbox+"</td>";
-                str +="<td width='15%'><a class='layui-btn layui-btn-normal update' userId="+list[i].id+">修改</a>";
-                str +="<a class='layui-btn layui-btn-normal delete' userId="+list[i].id+">删除</a></td>";
+                str +="<td width='15%' class=list_one>"+list[i].userNumber+"</td>";
+                str +="<td width='15%' class=list_one>"+list[i].userMailbox+"</td>";
+                str +="<td width='10%'>"+state+"</td>";
+                str +="<td width='25%'><a class='layui-btn layui-btn-normal update' userId="+list[i].id+">修改</a>";
+                str +="<a class='layui-btn layui-btn-normal delete' userId="+list[i].id+">删除</a>";
+                str +="<a class='layui-btn layui-btn-normal updateMailboxIndex' userId="+list[i].id+">"+set+"</a></td>";
                 str +="</tr>";
             }
             $("#tbody").append(str);
@@ -188,6 +201,28 @@
                     url: "user/operationUser.html?userId="+userId
                 });
             });
+
+            /**
+            * 设置用户接收邮箱权限
+            * */
+            $(".updateMailboxIndex").on("click",function(){
+                var sysUser = {};
+                sysUser.userId = $(this).attr("userId");
+                var html = $(this).html();
+                var mailboxIndex = 0;
+                if("准接邮"==html){
+                    mailboxIndex = 1;
+                }
+                sysUser.mailboxIndex = mailboxIndex;
+                $.post("/user/updateMailboxIndex",sysUser,function(result){
+                    var data = result.data;
+                    if(data){
+                        swal("设置用户接收邮箱权限提醒", "设置用户"+html+"成功", "success");
+                        init();
+                    }
+                });
+            });
+
 
         },"json");
     }

@@ -22,11 +22,15 @@ public class SysUser {
     private Integer userAge;
 
     @Column(name = "user_number")
-    private String userNumber;
+    private Integer userNumber;
 
     @Column(name = "user_password")
     private String userPassword;
 
     @Column(name = "user_mailbox")
     private String userMailbox;
+
+    @Column(name = "mailbox_index")
+    private Byte mailboxIndex;
+
 }

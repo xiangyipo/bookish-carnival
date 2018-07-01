@@ -51,10 +51,10 @@ public class SysUserContoller extends WebContoller {
      * 增加系统用户
      */
     @PostMapping("/saveUser")
-    public IMoocJSONResult saveUser(SysUser user) throws Exception {
+    public IMoocJSONResult saveUser(SysUser user){
         user.setId(getId());
-        sysUserService.saveUser(user);
-        return IMoocJSONResult.ok("保存成功");
+        int i = sysUserService.saveUser(user);
+        return IMoocJSONResult.ok("增加用户信息成功!!!用户账号为:"+i+"，密码默认为:123456");
     }
 
     /**
@@ -63,7 +63,7 @@ public class SysUserContoller extends WebContoller {
     @PostMapping("/updateUser")
     public IMoocJSONResult updateUser(SysUser user) {
         sysUserService.updateUser(user);
-        return IMoocJSONResult.ok("保存成功");
+        return IMoocJSONResult.ok("修改用户信息成功");
     }
 
     /**
@@ -90,6 +90,16 @@ public class SysUserContoller extends WebContoller {
     public IMoocJSONResult updatePws(SysUser sysUser) {
         sysUser.setId(getUserId());
         sysUserService.updatePassword(sysUser);
+        return IMoocJSONResult.ok(true);
+    }
+
+    /**
+    * 修改用户状态
+    * */
+    @PostMapping("/updateMailboxIndex")
+    public IMoocJSONResult updateMailboxIndex(SysUser sysUser) {
+        sysUser.setId(getUserId());
+        sysUserService.updateMailboxIndex(sysUser);
         return IMoocJSONResult.ok(true);
     }
 }

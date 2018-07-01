@@ -6,8 +6,9 @@
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="user_sex" jdbcType="VARCHAR" property="userSex" />
     <result column="user_age" jdbcType="INTEGER" property="userAge" />
-    <result column="user_number" jdbcType="VARCHAR" property="userNumber" />
+    <result column="user_number" jdbcType="INTEGER" property="userNumber" />
     <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
     <result column="user_mailbox" jdbcType="VARCHAR" property="userMailbox" />
+    <result column="mailbox_index" jdbcType="TINYINT" property="mailboxIndex" />
   </resultMap>
 </mapper>

@@ -7,18 +7,38 @@
 		<result column="user_name" jdbcType="VARCHAR" property="userName" />
 		<result column="user_sex" jdbcType="VARCHAR" property="userSex" />
 		<result column="user_age" jdbcType="INTEGER" property="userAge" />
-		<result column="user_number" jdbcType="VARCHAR" property="userNumber" />
+		<result column="user_number" jdbcType="INTEGER" property="userNumber" />
 		<result column="user_password" jdbcType="VARCHAR" property="userPassword" />
 		<result column="user_mailbox" jdbcType="VARCHAR" property="userMailbox" />
+		<result column="mailbox_index" jdbcType="TINYINT" property="mailboxIndex" />
 	</resultMap>
 
-  <!-- 查询简单的用户信息 -->
+
+  <!-- 获取MD5加密后字符串 -->
 	<select id="userPasswordEncrypt" resultType="java.lang.String"  parameterType="java.lang.String" >
 	    select MD5(#{VALUE})
 	</select>
 
+	<!-- 获取账户最大账号 -->
+    <select id="getMaxUserNumber" resultType="int">
+        select max(user_number) from sys_user
+    </select>
+
+	<!-- 查询所有接收邮件的用户 -->
+	<select id="getReceiveMailboxUser" resultMap="BaseResultMap">
+		select id,user_name,user_sex,user_age,user_number,user_password,user_mailbox,mailbox_index from sys_user WHERE mailbox_index = 1
+	</select>
+
+
+	<!-- 修改用户密码 -->
 	<update id="updatePassword" parameterType="com.imooc.pojo.SysUser">
 		update sys_user set user_password=MD5(#{userPassword}) WHERE id = #{id}
 	</update>
+
+	<!-- 修改用户接收邮件的权限 -->
+	<update id="updateMailboxIndex" parameterType="com.imooc.pojo.SysUser">
+		update sys_user set mailbox_index = mailboxIndex WHERE id = #{id}
+	</update>
+
 
 </mapper>

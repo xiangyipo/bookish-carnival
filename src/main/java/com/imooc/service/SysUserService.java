@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface SysUserService {
 
-    void saveUser(SysUser user);
+    int saveUser(SysUser user);
 
     void updateUser(SysUser user);
 
@@ -23,5 +23,9 @@ public interface SysUserService {
     int selectCount(SysUser user);
 
     int updatePassword(SysUser user);
+
+    int updateMailboxIndex(SysUser user);
+
+    List<SysUser> getReceiveMailboxUser();
 
 }

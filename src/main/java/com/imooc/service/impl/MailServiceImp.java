@@ -3,6 +3,7 @@ package com.imooc.service.impl;
 import com.imooc.cacheTools.UserCache;
 import com.imooc.pojo.SysUser;
 import com.imooc.service.MailService;
+import com.imooc.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
@@ -15,10 +16,6 @@ import java.util.List;
 @Service("mailService")
 public class MailServiceImp implements MailService {
 
-
-    @Resource
-    UserCache userCache;
-
     @Autowired
     private JavaMailSender mailSender;
 
@@ -26,6 +23,8 @@ public class MailServiceImp implements MailService {
     @Value("${spring.mail.username}")
     private String from;
 
+    @Resource
+    SysUserService sysUserService;
 
     /**
      * subject 主题
@@ -38,8 +37,7 @@ public class MailServiceImp implements MailService {
         message.setFrom(from);
         message.setSubject(subject);
         message.setText(html);
-        List<SysUser> sysUserList = userCache.getSysUserList();
-
+        List<SysUser> sysUserList = sysUserService.getReceiveMailboxUser();
         new Thread(new Runnable() {
             @Override
             public void run() {
