@@ -98,7 +98,6 @@ public class SysUserContoller extends WebContoller {
     * */
     @PostMapping("/updateMailboxIndex")
     public IMoocJSONResult updateMailboxIndex(SysUser sysUser) {
-        sysUser.setId(getUserId());
         sysUserService.updateMailboxIndex(sysUser);
         return IMoocJSONResult.ok(true);
     }

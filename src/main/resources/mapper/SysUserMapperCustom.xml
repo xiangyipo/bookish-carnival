@@ -37,7 +37,7 @@
 
 	<!-- 修改用户接收邮件的权限 -->
 	<update id="updateMailboxIndex" parameterType="com.imooc.pojo.SysUser">
-		update sys_user set mailbox_index = mailboxIndex WHERE id = #{id}
+		update sys_user set mailbox_index = #{mailboxIndex} WHERE id = #{id}
 	</update>
 
 

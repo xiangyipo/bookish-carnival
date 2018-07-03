@@ -142,6 +142,7 @@
             $("#tbody").empty();
             var str = "";
             for(var i=0;i<list.length;i++){
+                debugger
                 var set = "禁接邮";
                 var state = "接邮";
                 if(list[i].mailboxIndex==0){
@@ -207,7 +208,7 @@
             * */
             $(".updateMailboxIndex").on("click",function(){
                 var sysUser = {};
-                sysUser.userId = $(this).attr("userId");
+                sysUser.id = $(this).attr("userId");
                 var html = $(this).html();
                 var mailboxIndex = 0;
                 if("准接邮"==html){
