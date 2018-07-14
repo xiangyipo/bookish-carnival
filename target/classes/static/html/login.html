@@ -112,7 +112,7 @@
 <script src="../js/sweetalert.min.js"></script>
 <script>
     $("button").off();
-    $("#login").on("click",function(){
+    function login(){
         var userName = $("#userName").val();
         var password = $("#password").val();
         if(!userName){
@@ -133,6 +133,12 @@
                 swal("OMG!", "登录失败！请检查用户密码是否正确", "error");
             }
         },"json");
+    }
+    $(document).keyup(function(event){
+        login();
+    });
+    $("#login").on("click",function(){
+        login();
     })
 
 </script>
